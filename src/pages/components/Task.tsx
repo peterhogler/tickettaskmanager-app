@@ -21,11 +21,11 @@ const Task: React.FC<TaskProps> = ({ details }) => {
     const getStatusClass = (status: number) => {
         switch (status) {
             case 1:
-                return "bg-yellow-300";
+                return "custom-yellow-bg hover:bg-animate";
             case 2:
-                return "bg-yellow-400";
+                return "custom-orange-bg hover:bg-animate";
             case 3:
-                return "bg-emerald-500";
+                return "custom-emerald-bg hover:bg-animate";
             default:
                 return "";
         }
@@ -35,10 +35,14 @@ const Task: React.FC<TaskProps> = ({ details }) => {
 
     return (
         <li
-            className={`flex items-center p-3 ring-1 ring-slate-400 rounded cursor-pointer ${statusClass}`}
+            className={`flex items-center p-3 ring-1 ring-slate-400 rounded cursor-pointer ${statusClass} shadow duration-300 ease flex-wrap`}
             key={details.id}>
-            <h1>Title: {details.title}</h1>
-            <div className="flex ml-auto">
+            <div className={`h-5 w-5 bg-yellow-400 rounded-full mr-4 ${statusClass}`} />
+            <h1 className="font-medium">Title: {details.title}</h1>
+
+            <div className="flex ml-auto flex-wrap">
+                <div>Created: {details.date}</div>
+                <hr className="mx-4 w-[1px] h-5 bg-black" />
                 {details.status > 1 && (
                     <button
                         className="hover:bg-gray-200 rounded-full duration-300"

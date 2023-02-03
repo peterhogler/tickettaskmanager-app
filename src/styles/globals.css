@@ -12,4 +12,33 @@
     .arrow-left {
         clip-path: polygon(100% 100%, 100% 0, 0 50%);
     }
+
+    .custom-yellow-bg {
+        @apply bg-gradient-to-r from-yellow-50 to-yellow-200;
+    }
+
+    .custom-orange-bg {
+        @apply bg-gradient-to-r from-yellow-50 to-yellow-300;
+    }
+
+    .custom-emerald-bg {
+        @apply bg-gradient-to-r from-emerald-50 to-emerald-300;
+    }
+
+    .bg-animate {
+        background-size: 400%;
+        -webkit-animation: gradient 4s ease-in-out infinite alternate;
+        -moz-animation: gradient 4s ease-in-out infinite alternate;
+        animation: gradient 4s ease-in-out infinite alternate;
+        animation-fill-mode: forwards;
+    }
+
+    @keyframes gradient {
+        0% {
+            background-position: 0% 0%;
+        }
+        100% {
+            background-position: 100% 0%;
+        }
+    }
 }

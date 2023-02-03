@@ -3,6 +3,7 @@ import type { PayloadAction } from "@reduxjs/toolkit";
 
 export interface Task {
     id: string | undefined;
+    date: string;
     title: string;
     status: number;
     message: string;

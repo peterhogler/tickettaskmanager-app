@@ -25,8 +25,12 @@ const CreateTaskModal: React.FC<CreateTaskModalProps> = ({ onClose }) => {
     const handleFormSubmit = (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
         const uuid = uuidv4();
+        const currentDate = new Date();
+        const currentDateFormat = `${currentDate.toJSON()}${currentDate.getUTCMilliseconds()}`;
+
         const task = {
             id: uuid,
+            date: currentDateFormat,
             title: state.title,
             status: Number(state.status) || 1,
             message: state.message,
@@ -37,7 +41,7 @@ const CreateTaskModal: React.FC<CreateTaskModalProps> = ({ onClose }) => {
 
     return (
         <div>
-            <div className="z-10 modal bg-white w-[500px] absolute ring-1 ring-slate-400 rounded  overflow-y-hidden shadow-lg left-16 top-4">
+            <div className="z-10 modal bg-white/5 backdrop-blur-lg w-[500px] fixed ring-1 ring-slate-400 rounded  overflow-y-hidden shadow-lg top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%]">
                 <div className="relative p-4">
                     <div className="flex gap-4 pt-2 pb-4">
                         <div>
@@ -47,7 +51,10 @@ const CreateTaskModal: React.FC<CreateTaskModalProps> = ({ onClose }) => {
                             <h1 className="text-xl">Create A Ticket</h1>
                             <p className="text-lg">Ex. I need help walking the dog</p>
                             <button className="absolute top-0 right-0 " onClick={onClose}>
-                                <BiX className="bg-slate-200 rounded" size={28} />
+                                <BiX
+                                    className="bg-slate-200 rounded hover:bg-slate-400 duration-300 ease"
+                                    size={28}
+                                />
                             </button>
                         </div>
                     </div>
@@ -72,18 +79,18 @@ const CreateTaskModal: React.FC<CreateTaskModalProps> = ({ onClose }) => {
                                     Status*
                                 </label>
                                 <select
-                                    className="ring-1 ring-slate-400 p-[7px]  rounded"
+                                    className="ring-1 ring-slate-400 bg-slate-100 p-[7px]  rounded cursor-pointer"
                                     id="status"
                                     name="status"
                                     onChange={handleInputChange}
                                     defaultValue="1">
-                                    <option className="font-sans" value="1">
+                                    <option className="font-sans cursor-pointer" value="1">
                                         New
                                     </option>
-                                    <option className="font-sans" value="2">
+                                    <option className="font-sans cursor-pointer" value="2">
                                         Work In Progress
                                     </option>
-                                    <option className="font-sans" value="3">
+                                    <option className="font-sans cursor-pointer" value="3">
                                         Completed
                                     </option>
                                 </select>
@@ -97,16 +104,18 @@ const CreateTaskModal: React.FC<CreateTaskModalProps> = ({ onClose }) => {
                                 className="block w-full ring-1 ring-slate-400 resize-none h-[100px] rounded p-2"
                                 id="message"
                                 name="message"
-                                placeholder="Hi, Can you please help me walk the dog. I need to take care of some errands."
+                                placeholder="Hi, Can you please help me walk the dog. I need to take care of some errands"
                                 required
                                 onChange={handleInputChange}
                             />
                         </div>
                         <div className="mt-1 flex items-center justify-between">
-                            <div className="grid place-items-center bg-gray-200 self-stretch px-2 ">
-                                Tip: Try to write descriptive as possible.
+                            <div className="grid place-items-center bg-gray-200 self-stretch px-4 ring-slate-400 ring-1 rounded">
+                                Tip: Try to write descriptive as possible
                             </div>
-                            <button className="px-4 py-1 bg-slate-200" type="submit">
+                            <button
+                                className="px-4 py-1 bg-slate-200 rounded ring-slate-400 ring-1"
+                                type="submit">
                                 Submit
                             </button>
                         </div>

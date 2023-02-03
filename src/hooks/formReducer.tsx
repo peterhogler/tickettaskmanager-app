@@ -11,7 +11,8 @@ interface FormActions {
 }
 
 export interface FormState {
-    id: string | undefined
+    id: string | undefined;
+    date: string;
     title: string;
     status: number;
     message: string;
@@ -19,6 +20,7 @@ export interface FormState {
 
 export const INITIAL_STATE: FormState = {
     id: "",
+    date: "",
     title: "",
     status: 0,
     message: "",
