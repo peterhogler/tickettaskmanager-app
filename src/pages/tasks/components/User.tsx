@@ -21,7 +21,7 @@ const User = () => {
     return (
         <>
             {isEditing ? (
-                <form className="text-lg" onSubmit={onSave}>
+                <form className="text-xl" onSubmit={onSave}>
                     <div className="relative w-min  ring-1">
                         <input className="indent-1" value={user} onChange={onEditChange} />
                         <button
@@ -32,7 +32,7 @@ const User = () => {
                     </div>
                 </form>
             ) : (
-                <div className="text-lg flex items-center gap-2 ">
+                <div className="text-xl flex items-center gap-2 ">
                     Hi! Welcome back {user}!
                     <button onClick={handleEditButton}>
                         <BiEditAlt className="text-gray-600" size={24} />

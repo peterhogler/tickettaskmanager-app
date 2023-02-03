@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { BiUser, BiLabel, BiNotification, BiPlusCircle, BiSun, BiCog } from "react-icons/bi";
 import CreateTaskModal from "./CreateTaskModal";
 const Sidebar: React.FC = () => {
