@@ -14,42 +14,42 @@ const Sidebar: React.FC = () => {
             <aside className="flex flex-col items-start py-4 px-3 border-r border-gray-200 shadow">
                 <ul className="flex flex-col gap-4 font-bold">
                     <li>
-                        <button className="rounded p-1 hover:bg-slate-100 w-full">
-                            <Link className="flex items-center gap-2  px-1" href="/">
+                        <button className="rounded p-1  w-full">
+                            <Link className="flex items-center gap-2" href="/">
                                 <BiUser size={28} />
                                 Account
                             </Link>
                         </button>
                     </li>
                     <li>
-                        <button className="rounded p-1 hover:bg-slate-100 w-full">
-                            <Link className="flex items-center gap-2  px-1" href="labels">
+                        <button className="rounded p-1  w-full">
+                            <Link className="flex items-center gap-2" href="labels">
                                 <BiLabel size={28} />
                                 Labels
                             </Link>
                         </button>
                     </li>
                     <li className="relative">
-                        <button className="rounded p-1 hover:bg-slate-100 w-full" onClick={handleModalOpen}>
-                            <div className="flex items-center gap-2  px-1">
+                        <button className="rounded p-1  w-full" onClick={handleModalOpen}>
+                            <div className="flex items-center gap-2">
                                 <BiPlusCircle size={28} />
                                 Create Task
                             </div>
                         </button>
                     </li>
                 </ul>
-                <ul className="flex flex-col gap-4 mt-auto">
+                <ul className="flex flex-col gap-4 mt-auto font-bold">
                     <li>
-                        <button className="rounded p-1 hover:bg-slate-100 w-full">
-                            <Link className="flex items-center gap-2  px-1" href="/">
+                        <button className="rounded p-1  w-full">
+                            <Link className="flex items-center gap-2" href="/">
                                 <BiSun size={28} />
                                 Theme
                             </Link>
                         </button>
                     </li>
                     <li>
-                        <button className="rounded p-1 hover:bg-slate-100 w-full">
-                            <Link className="flex items-center gap-2  px-1" href="tasks">
+                        <button className="rounded p-1  w-full">
+                            <Link className="flex items-center gap-2" href="tasks">
                                 <BiCog size={28} />
                                 Settings
                             </Link>

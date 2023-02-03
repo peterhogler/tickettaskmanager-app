@@ -14,7 +14,7 @@
     }
 
     .custom-yellow-bg {
-        @apply bg-gradient-to-r from-yellow-50 to-yellow-200;
+        @apply bg-gradient-to-r from-yellow-50 to-gray-200;
     }
 
     .custom-orange-bg {
