@@ -1,4 +1,4 @@
-import User from "@/pages/components/User";
+import User from "./User";
 
 const Navbar = ({ title }: { title: string }) => {
     return (

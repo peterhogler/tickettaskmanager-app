@@ -11,7 +11,7 @@ const Sidebar: React.FC = () => {
 
     return (
         <>
-            <aside className="flex flex-col items-start py-4 px-3 border-r border-gray-200 shadow">
+            <aside className="flex flex-col items-start py-4 px-3 border-r border-gray-200">
                 <ul className="flex flex-col gap-4 font-bold">
                     <li>
                         <button className="rounded p-1  w-full">

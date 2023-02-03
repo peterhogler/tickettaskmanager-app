@@ -7,7 +7,7 @@ const Dashboard = () => {
     return (
         <div className="mt-3 grid grid-cols-1 lg:grid-cols-3 gap-6">
             <div>
-                <div className="flex items-center justify-between  mb-4 py-3  rounded font-semibold">
+                <div className="flex items-center justify-between  mb-4 py-3  rounded font-semibold border-b">
                     <div className="flex items-center text-lg">
                         <div className="h-5 w-5 bg-yellow-400 rounded-full mr-3" />
                         <h1>Newly Created Tasks</h1>
@@ -23,7 +23,7 @@ const Dashboard = () => {
                 </ul>
             </div>
             <div>
-                <div className="flex items-center justify-between  mb-4 py-3  rounded font-semibold">
+                <div className="flex items-center justify-between  mb-4 py-3  rounded font-semibold border-b">
                     <div className="flex items-center text-lg">
                         <div className="h-5 w-5 bg-yellow-500 rounded-full mr-3" />
                         <h1>Work In Progress Tasks</h1>
@@ -39,7 +39,7 @@ const Dashboard = () => {
                 </ul>
             </div>
             <div>
-                <div className="flex items-center justify-between  mb-4 py-3  rounded font-semibold">
+                <div className="flex items-center justify-between  mb-4 py-3  rounded font-semibold border-b">
                     <div className="flex items-center text-lg">
                         <div className="h-5 w-5 bg-emerald-400 rounded-full mr-3" />
                         <h1>Newly Created Tasks</h1>
