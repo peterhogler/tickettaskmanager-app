@@ -9,7 +9,7 @@ const Dashboard = () => {
             <div>
                 <div className="flex items-center justify-between  mb-4 py-3  rounded font-semibold">
                     <div className="flex items-center text-lg">
-                        <div className="h-5 w-5 bg-yellow-400 rounded-full mr-4" />
+                        <div className="h-5 w-5 bg-yellow-400 rounded-full mr-3" />
                         <h1>Newly Created Tasks</h1>
                     </div>
                     <div>Date Added</div>
@@ -25,7 +25,7 @@ const Dashboard = () => {
             <div>
                 <div className="flex items-center justify-between  mb-4 py-3  rounded font-semibold">
                     <div className="flex items-center text-lg">
-                        <div className="h-5 w-5 bg-yellow-500 rounded-full mr-4" />
+                        <div className="h-5 w-5 bg-yellow-500 rounded-full mr-3" />
                         <h1>Work In Progress Tasks</h1>
                     </div>
                     <div>Date Added</div>
@@ -41,7 +41,7 @@ const Dashboard = () => {
             <div>
                 <div className="flex items-center justify-between  mb-4 py-3  rounded font-semibold">
                     <div className="flex items-center text-lg">
-                        <div className="h-5 w-5 bg-emerald-400 rounded-full mr-4" />
+                        <div className="h-5 w-5 bg-emerald-400 rounded-full mr-3" />
                         <h1>Newly Created Tasks</h1>
                     </div>
                     <div>Date Added</div>
