@@ -26,7 +26,7 @@ const Dashboard = () => {
                 <div className="flex items-center justify-between  mb-4 py-3  rounded font-semibold border-b">
                     <div className="flex items-center text-lg">
                         <div className="h-5 w-5 bg-yellow-500 rounded-full mr-3" />
-                        <h1>Work In Progress Tasks</h1>
+                        <h1>Work In Progress/h1>
                     </div>
                     <div>Date Added</div>
                 </div>
